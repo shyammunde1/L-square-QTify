@@ -1,6 +1,12 @@
+import ButtonUse from "./ButtonUse";
+import SearchBox from "./SearchBox";
+
+
 function Navbar(){
-    return <>
-    <h1>Navbar</h1>
+    const buttonName="Give Feedback"
+    return <>    
+    <ButtonUse text={buttonName}/>
+    <SearchBox />
     </>
 }
 
