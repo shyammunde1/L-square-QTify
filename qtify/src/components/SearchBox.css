@@ -1,9 +1,6 @@
 .container {
-  background-color: #00BD2B;
   display: inline-flex;
-  align-items: center;
   height: 40px;
-  margin-top: 10px;
 }
 
 .search {
@@ -11,15 +8,13 @@
   height: 90%;
   border-radius: 8px 0px 0px 8px;
   border: 1px solid gray;
-  
-  
 }
 
-.search_icon{
-    border-radius: 0px 8px 8px 0px;
-      border-left: none;
-      border: 1px solid gray;
-      cursor: pointer;
-      height: 100%;
-      padding: 14px 20px;
+.search_icon {
+  border-radius: 0px 8px 8px 0px;
+  border-left: none;
+  border: 1px solid gray;
+  cursor: pointer;
+  height: 100%;
+  padding: 14px 20px;
 }
