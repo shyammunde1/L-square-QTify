@@ -7,6 +7,7 @@ import Section from "../components/section/Section";
 function HomePage() {
   return (
     <>
+      {/* Hero section */}
       <Hero />
       {/* Album section */}
       <Section />
