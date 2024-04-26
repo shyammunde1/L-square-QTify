@@ -1,0 +1,28 @@
+.hero {
+    background-color: #121212;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+  
+  .heroTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+  }
+  
+  .heroTitle > h1 {
+    height: 48px;
+    font-size: 32px;
+  }
+  
+  .heroImage {
+    width: 212px;
+    height: 212px;
+  }

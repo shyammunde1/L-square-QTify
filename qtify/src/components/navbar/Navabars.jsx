@@ -1,7 +1,7 @@
-import ButtonUse from "./ButtonUse";
-import SearchBox from "./SearchBox";
+import ButtonUse from "../button/ButtonUse";
+import SearchBox from "../search/SearchBox";
 import { AppBar, Toolbar } from "@mui/material";
-import logo from "../assets/logo.png";
+import logo from "../../assets/logo.png";
 
 import "./Navabars.css";
 

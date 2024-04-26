@@ -1,17 +1,16 @@
 import React from "react";
-import styles from './HomePage.module.css'; 
 
-import HeroImage from '../assets/hero_headphones.png';
+
+import Hero from "../components/hero/Hero";
+import Section from "../components/section/Section";
 
 function HomePage() {
   return (
-    <section className={styles.hero}>
-      <div className={styles.heroTitle}>
-        <h1>100 Thousand Songs, ad-free</h1>
-        <h1>Over thousands podcast episodes</h1>
-      </div>
-      <img className={styles.heroImage} src={HeroImage} alt='headphone'/>
-    </section>
+    <>
+      <Hero />
+      {/* Album section */}
+      <Section />
+    </>
   );
 }
 
