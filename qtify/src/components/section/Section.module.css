@@ -1,9 +1,28 @@
-
-.header{
-    background-color: #121212;
-    color: #fff;
+.header {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
-}
+    margin-inline: 31px;
+  }
+  
+  .toggleText {
+    cursor: pointer;
+    color: green;
+    font-size: 20px;
+  }
+  
+  .wrapper {
+    margin-left: 31px;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .cardWrapper {
+    margin-top: 18px;
+  }
 
+  .container{
+    background-color: #121212;
+    color:#fff
+  }
