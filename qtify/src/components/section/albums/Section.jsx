@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, CircularProgress } from "@mui/material";
-import Card from "../card/Card";
-import Carousel from "../carousel/Carousel";
+import Card from "../../card/Card";
+import Carousel from "../../carousel/Carousel";
 import Styles from "./Section.module.css";
 
 export default function Section({ title, data, type }) {

@@ -1,11 +1,11 @@
 
 import axios from 'axios'
 
-export const BACKEND_ENPOINT = "https://qtify-backend-labs.crio.do"
+export const BACKEND_ENDPOINT = "https://qtify-backend-labs.crio.do"
 
 export const fetchTopAlbums = async () => {
     try {
-        const res = await axios.get(`${BACKEND_ENPOINT}/albums/top`);
+        const res = await axios.get(`${BACKEND_ENDPOINT}/albums/top`);
         console.log(res.data)
         return res.data
     } catch (error) {
@@ -15,7 +15,7 @@ export const fetchTopAlbums = async () => {
 }
 export const fetchNewAlbums = async () => {
     try {
-        const res = await axios.get(`${BACKEND_ENPOINT}/albums/new`);
+        const res = await axios.get(`${BACKEND_ENDPOINT}/albums/new`);
         console.log(res.data)
         return res.data
     } catch (error) {
@@ -23,6 +23,32 @@ export const fetchNewAlbums = async () => {
         return null
     }
 }
+export const fetchSongs = async () => {
+    try {
+        const res = await axios.get(`${BACKEND_ENDPOINT}/songs`);
+        console.log(res.data)
+        return res.data
+    } catch (error) {
+        console.log(error)
+        return null
+    }
+}
+
+export const fetchGenres = async () => {
+    try {
+      const allObj = {
+        key: "all",
+        label: "All",
+      }; // adding aditional obj because we also need all genres key or label
+  
+      const res = await axios.get(`${BACKEND_ENDPOINT}/genres`);
+      const genresData = res.data.data;
+      genresData.unshift(allObj);
+      return genresData;
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
 
 

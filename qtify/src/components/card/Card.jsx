@@ -28,7 +28,7 @@ export default function Card({ data, type }) {
           </Tooltip>
         );
       }
-      case "songs": {
+      case "Songs": {
         const { image, likes, title } = data;
 
         return (
