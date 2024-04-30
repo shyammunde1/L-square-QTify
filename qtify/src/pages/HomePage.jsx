@@ -4,6 +4,7 @@ import { fetchTopAlbums, fetchNewAlbums, fetchSongs,fetchGenres} from "../api/ap
 import Hero from "../components/hero/Hero";
 import Section from "../components/section/albums/Section";
 import GenreSection from "../components/section/genre/GenreSection";
+import { Divider } from "@mui/material";
 
 function HomePage() {
   const [topAlbumSongs, setTopAlbumSongs] = useState([]);
@@ -62,7 +63,7 @@ function HomePage() {
       {/* Album section */}
       <Section type="album" title="Top Albums" data={topAlbumSongs} />
       <Section type="album" title="New Albums" data={newAlbumSongs} />
-      <hr />
+      <Divider style={{background:"green"}} />
      {/* All songs section or Geners section */}
      <GenreSection data={songs} title="Songs" type="Songs" genreList={genre} />
     </>

@@ -1,50 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Tab, Tabs } from "@mui/material";
 import Carousel from "../../carousel/Carousel";
-import Styles from "./GenreSection.module.css";
 import Card from "../../card/Card";
+import sortByGenre from "../../../utils/sortByGenre";
 
-const GenreSection = ({ data, title, type }) => {
+import Styles from "./GenreSection.module.css";
+
+const GenreSection = ({ data, title, type, genreList }) => {
   const [value, setValue] = useState("all");
+  const [songsData, setSongsData] = useState([]);
 
   const tabsHandler = (e, newValue) => {
     setValue(newValue);
   };
 
+  useEffect(() => {
+    setSongsData(sortByGenre(data, value));
+  }, [value, data]);
+
   return (
     <div className={Styles.container}>
       <div className={Styles.header}>
-        <h3 style={{ fontSize: "20px" }}>{title}</h3>
-        <Tabs value={value} onChange={tabsHandler}>
-          <Tab value="all" label="All" />
-          <Tab value="rock" label="rock" />
-          <Tab value="pop" label="pop" />
-          <Tab value="jazz" label="jazz" />
-          <Tab value="blues" label="blues" />
+        <h3 style={{ fontSize: "20px",marginLeft:"30px", padding:"2px" }}>{title}</h3>
+        <Tabs className="tablist" value={value} onChange={tabsHandler}>
+          {genreList?.map((genre) => (
+            <Tab
+              style={{color:"white"}}
+              value={genre.key}
+              label={genre.label}
+              key={genre.key}
+            />
+          ))}
         </Tabs>
       </div>
       <div className={Styles.carouselContainer}>
-        {value === "rock" && (
-          <Carousel
-            data={data}
-            componentRender={(ele) => <Card data={ele} type={type} />}
-            activeTab={value}
-          />
-        )}
-        {value === "pop" && (
-          <Carousel
-            data={data}
-            componentRender={(ele) => <Card data={ele} type={type} />}
-            activeTab={value}
-          />
-        )}
-        {value === "all" && (
-          <Carousel
-            data={data}
-            componentRender={(ele) => <Card data={ele} type={type} />}
-            activeTab={value}
-          />
-        )}
+        <Carousel
+          data={songsData}
+          componentRender={(ele) => <Card data={ele} type={type} />}
+          activeTab={value}
+        />
       </div>
     </div>
   );
