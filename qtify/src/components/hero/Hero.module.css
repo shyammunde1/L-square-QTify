@@ -1,6 +1,6 @@
 .hero {
-    background-color: #121212;
-    color: #fff;
+    background-color: var(--color-black);
+    color: var(--color-white);
     padding: 16px;
     text-align: center;
     display: flex;

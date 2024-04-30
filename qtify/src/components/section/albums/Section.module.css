@@ -7,7 +7,7 @@
   
   .toggleText {
     cursor: pointer;
-    color: green;
+    color: var(--color-primary);
     font-size: 20px;
   }
   
@@ -23,7 +23,7 @@
   }
 
   .container{
-    background-color: #121212;
-    color:#fff;
+    background-color: var(--color-black);
+    color : var(--color-white);
     padding:10px;
   }

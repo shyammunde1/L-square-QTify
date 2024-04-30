@@ -19,9 +19,7 @@ export default function Carousel({ data, componentRender }) {
         <CarouselLeft />
 
         {data.map((item, idx) => (
-          <SwiperSlide key={idx} style={{ width: "auto" }}>
-            {componentRender(item)}
-          </SwiperSlide>
+          <SwiperSlide key={idx}>{componentRender(item)}</SwiperSlide>
         ))}
       </Swiper>
     </div>

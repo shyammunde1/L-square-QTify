@@ -5,7 +5,7 @@
 
 .search {
   width: 260px;
-  height: 90%;
+  height: 100%;
   border-radius: 8px 0px 0px 8px;
   border: 1px solid gray;
   padding: 1px 10px;
@@ -18,5 +18,5 @@
   cursor: pointer;
   height: 100%;
   padding: 14px 20px;
-  background-color: white;
+  background-color: var(--color-white);
 }

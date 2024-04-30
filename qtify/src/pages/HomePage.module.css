@@ -1,17 +1,14 @@
-
-
 /* album section */
 
 .albumsection {
-  background-color: #121212;
-  color: #fff;
+  background-color: var(--color-black);
+  color: var(--color-white);
   margin-top: 0px;
 }
 
-.albumTab{
+.albumTab {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px;
 }
-
