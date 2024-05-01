@@ -6,6 +6,7 @@ import Section from "../components/section/albums/Section";
 import GenreSection from "../components/section/genre/GenreSection";
 import { Divider } from "@mui/material";
 import FAQ from "../components/faq/FAQ";
+import Footer from "../components/footer/Footer";
 
 function HomePage() {
   const [topAlbumSongs, setTopAlbumSongs] = useState([]);
@@ -70,6 +71,8 @@ function HomePage() {
      <Divider style={{background:"#34c94b",marginTop:"30px"}} />
      {/* FAQ section  */}
      <FAQ />
+     {/* footer */}
+     <Footer />
     </>
   );
 }
