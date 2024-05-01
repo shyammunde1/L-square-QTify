@@ -5,6 +5,7 @@ import Hero from "../components/hero/Hero";
 import Section from "../components/section/albums/Section";
 import GenreSection from "../components/section/genre/GenreSection";
 import { Divider } from "@mui/material";
+import FAQ from "../components/faq/FAQ";
 
 function HomePage() {
   const [topAlbumSongs, setTopAlbumSongs] = useState([]);
@@ -63,9 +64,12 @@ function HomePage() {
       {/* Album section */}
       <Section type="album" title="Top Albums" data={topAlbumSongs} />
       <Section type="album" title="New Albums" data={newAlbumSongs} />
-      <Divider style={{background:"green"}} />
+      <Divider style={{background:"#34c94b",marginTop:"30px"}} />
      {/* All songs section or Geners section */}
      <GenreSection data={songs} title="Songs" type="Songs" genreList={genre} />
+     <Divider style={{background:"#34c94b",marginTop:"30px"}} />
+     {/* FAQ section  */}
+     <FAQ />
     </>
   );
 }
