@@ -1,6 +1,41 @@
-.container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width:auto;
+}
+
+.playIcon {
+  margin: 10px;
+  padding: 10px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  border-radius: 50px 50px;
+  font-weight: 900;
+}
+
+.progressbar {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.label{
+    margin: 10px;
 }
